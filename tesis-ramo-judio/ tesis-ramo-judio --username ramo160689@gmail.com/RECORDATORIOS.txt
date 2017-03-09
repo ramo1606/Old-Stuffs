@@ -1,0 +1,46 @@
+- arrelgar parser claro por las hojas de las sabanas
+- poner tooltips a todo
+- guardar en csv y arff
+
+
+
+
+Cosas Para Hacer y Recordar en las Reuniones
+
+PARA HACER:
+ - Es mas amigable las opciones de salida por columan que por fila?
+ - Los parsers deben agregar un campo a la DB donde digan la direccion de archivo de la base de datos.
+ - incorporar distancia de edición (Levenshtein) como algo superior a los substrings para proponer correspondencias para nombres de columna no vistos con los nombres conocidos
+ - Poner las leyendas de la funcion en cada boton, checkbox y demas cosas faltantes.
+
+PARA HABLAR CON LAURA:
+- Creacion de empresa propia para cunado guarde las busquedas y quiera levantarlas de nuevo.
+
+
+PARA HABLAR CON EL CLIENTE:
+- Quieren ver la direccin de archivo, siempre o nunca?
+- hay que hablar con el cliente para ver cómo incorporar la opción "descartar", hacerlo de forma unificada con el tratamiento para los campos desconocidos en la sección "Unificación de Columnas"
+- Como prefieren el uso del campo duracion. Con hora de inicio y hora fin, o por duracion de llamada.
+- Preguntar si les sirve todo lo que hya para bsucar, o prefieren menos cosas.
+
+
+Mail de Laura:
+- usabilidad
+- información que queremos obtener de las sábanas:
+  - qué hacemos con la duración? cómo se puede interpretar?
+  - info adicional en nextel
+  - en general, ideas sobre cómo mejorar la necesidad de estrategias muy ad hoc para el parseo de sábanas?
+- qué pasa con las notas? quizás un pequeño resumen en texto?
+
+- motivación es justificación: descripción del problema existente, solución en abstracto y solución en concreto, siempre primero se describe en abstracto y después se pasa a lo concreto. P. ej.:
+
+problema: acceso y manejo de datos poco amigable, con grandes cantidades de datos y formatos difíciles. En concreto, sábanas de llamadas telefónicas...
+solución: facilitar el acceso y manejo de datos mediante integración de datos y una interfaz gráfica. En concreto, se analizaron las sábanas, se creó una interfaz, una ontología...
+
+--
+
+*** Items obtenidos del feedback con el cliente:
+ - Incorporar opciones de búsqueda por códogo de área. (todos los códigos menos uno, uno en particular, etc)
+ - incorpar rango de duración y normalizar los formatos de las sabanas para filtrar llamadas por ese medio.
+ - incorporar rango de fecha de INICIO de llamadas
+ - revisar ampliar busqueda

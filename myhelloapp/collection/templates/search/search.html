@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html' %}
+{% block title %}Browse - {{ block.super }}{% endblock %}
+{% block content %}
+	
+	<div class="jumbotron text-center">
+        <h2 class="text-center">Browse Things{% if initial %} Starting with '{{ initial|title }}'{% endif %}</h2>
+		<div class="btn-group text-center" role="group" aria-label="Things">
+			{% for letter in 'abcdefghijklmnopqrstuvwxyz' %}
+				<a type="button" href="{% url 'browse_by_name' initial=letter %}"{% if initial == letter %}class="btn btn-default active" {% else %}class="btn btn-default"{% endif %}>{{ letter|upper }}</a>
+			{% endfor %}
+		</div>
+		
+		<div class="marketing">
+			<div class="row">
+			{% for thing in things %}
+				<div class="col-lg-4">
+					<img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+					<h2>{{ thing.name }}</h2>
+					<p>Una descripcion o texto de las cosas.</p>
+					<p><a class="btn btn-default" href="{% url 'thing_detail' slug=thing.slug %}" role="button">View details &raquo;</a></p>
+				</div><!-- /.col-lg-4 -->
+			{% empty %}
+				<div class="alert alert-danger" role="alert">Sorry, no results!</div>
+			{% endfor %}
+			</div><!-- /.row -->
+		</div><!-- /.marketing -->
+	</div>
+{% endblock %}

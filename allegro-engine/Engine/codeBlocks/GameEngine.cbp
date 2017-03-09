@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GameEngine" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../lib/Engine" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="../obj" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add directory="Engine" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../lib" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-lEngine" />
+					<Add option="`allegro-config –libs –static`" />
+					<Add library="../lib/libEngine.a" />
+					<Add directory="../lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/GameEngine" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-O2" />
+					<Add directory="Engine" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="../../main.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../Engine.layout" />
+		<Unit filename="../actor.cpp" />
+		<Unit filename="../actor.h" />
+		<Unit filename="../actorGraphic.cpp" />
+		<Unit filename="../actorGraphic.h" />
+		<Unit filename="../actorManager.cpp" />
+		<Unit filename="../actorManager.h" />
+		<Unit filename="../advanced2d.cpp" />
+		<Unit filename="../advanced2d.h" />
+		<Unit filename="../aircraft.cpp" />
+		<Unit filename="../aircraft.h" />
+		<Unit filename="../audiomanager.cpp" />
+		<Unit filename="../audiomanager.h" />
+		<Unit filename="../bullet.cpp" />
+		<Unit filename="../bullet.h" />
+		<Unit filename="../collisionManager.cpp" />
+		<Unit filename="../collisionManager.h" />
+		<Unit filename="../control.cpp" />
+		<Unit filename="../control.h" />
+		<Unit filename="../controlManager.cpp" />
+		<Unit filename="../controlManager.h" />
+		<Unit filename="../controllableActor.h" />
+		<Unit filename="../controllableObject.cpp" />
+		<Unit filename="../controllableObject.h" />
+		<Unit filename="../easymessage.cpp" />
+		<Unit filename="../easymessage.h" />
+		<Unit filename="../font.cpp" />
+		<Unit filename="../font.h" />
+		<Unit filename="../keyboard.cpp" />
+		<Unit filename="../keyboard.h" />
+		<Unit filename="../mainwindow.cpp" />
+		<Unit filename="../mainwindow.h" />
+		<Unit filename="../mask.cpp" />
+		<Unit filename="../mask.h" />
+		<Unit filename="../particle.cpp" />
+		<Unit filename="../particle.h" />
+		<Unit filename="../particleemitter.cpp" />
+		<Unit filename="../particleemitter.h" />
+		<Unit filename="../peripheral.cpp" />
+		<Unit filename="../peripheral.h" />
+		<Unit filename="../pixel.cpp" />
+		<Unit filename="../pixel.h" />
+		<Unit filename="../sprite.cpp" />
+		<Unit filename="../sprite.h" />
+		<Unit filename="../stageManager.cpp" />
+		<Unit filename="../stageManager.h" />
+		<Unit filename="../star.cpp" />
+		<Unit filename="../star.h" />
+		<Unit filename="../transsprite.cpp" />
+		<Unit filename="../transsprite.h" />
+		<Unit filename="../vector.cpp" />
+		<Unit filename="../vector.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

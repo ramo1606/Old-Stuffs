@@ -1,0 +1,26 @@
+numeroOrigen;Nro. Pagador;Origen;Tel. Orig.;Nro. Llamante;Linea;TELEFONO NEXTEL;Nro. de Origen
+numeroDestino;Nro. Destino;Otro;Nro. Llamado;Destino;Tel. Dest.;Nro. de Destino
+fecha;Fecha y Hora;Fecha I.;Fecha-Hora Envio;Fecha;Fecha/Hora Envio;Fecha de Inicio
+hora;Fecha y Hora;Fecha I.;Hora;Fecha-Hora Envio;Hora de Inicio
+duracion;Duracion;Duración (Seg.);Durac;Dur.;Duración
+numeroImei;Esn/Imei
+numeroSim;Serie
+celda;Celda Id;id. Celda;Sec.
+direccionOrigen;Dir. Orig.
+direccionDestino;Dir. Dest.
+localidadOrigen;Loc. Orig.
+localidadDestino;Loc. Dest.
+concepto;Concep.
+tipoComunicacion;Destino;SMS/MMS;Tipo
+estado;Estado;Envio
+antenaDireccion;Celda;Celda direccion;Descripc. Celda;Celda (NOMBRE[ORIENTACION]<>UBICACION<>DIRECCION);Direccion de Antena
+antenaProvincia;Celda provincia
+antenaLocalidad;Celda localidad
+titularOrigen;Contac. Orig.
+titularDestino;Contac. Dest.
+empresaOrigen;Emp. Orig.
+empresaDestino;Emp. Dest.
+provinciaOrigen;Prov. Orig.
+provinciaDestino;Prov. Dest.
+contenidoMensaje;Contenido
+descartables;LM;Tasable;Plataforma;Lote;Dir.;Fecha F.;Fecha/Hora Recepcion;Fecha-Hora Recibido

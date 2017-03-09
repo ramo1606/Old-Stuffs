@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html' %}
+{% block title %}
+	{{ thing.name }} - {{ block.super }}
+{% endblock %}
+{% block content %}
+	<h1>{{ thing.name }}</h1>
+	<p>{{ thing.description }}</p>
+	{% for upload in uploads %}
+		<img src="{{upload.image.url}}" alt=""/>
+	{% endfor %}
+	
+	{% if social_accounts %}
+	<ul>
+		{% for social_account in social_accounts %}
+		<li>
+			<a href="http://{{ social_account.network }}.com/{{ social_account.username }}">
+				{{ social_account.network|title }}
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+	{% if user == thing.user%}
+		<p>
+			<a href="{% url 'edit_thing' slug=thing.slug %}">Edit me!</a>
+		</p>
+	{% endif %}
+{% endblock %}

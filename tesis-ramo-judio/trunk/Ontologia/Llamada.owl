@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ramo/ontologies/2012/10/untitled-ontology-15"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ramo/ontologies/2012/10/untitled-ontology-15">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Antena"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Celda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chip"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Direccion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Empresa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Investigables"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lugares_Fisicos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Notas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Particular"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Telefono"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Titular"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Esta_en"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Llama"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Pedir_Nota"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Recibe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Usa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#direccionDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#esTitularDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hospeda"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneCelda"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneChip"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneDireccion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneTelefono"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tieneTitular"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#12314353"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#12485732954"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#23523467324"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#34056943"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Antena1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Celda1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Direccion_falsa_123"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Direccion_falsa_231"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Direccion_falsa_321"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ramo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ramote"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nota_antena"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Antena"/>
+        <Class IRI="#Lugares_Fisicos"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chip"/>
+        <Class IRI="#Investigables"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Empresa"/>
+        <Class IRI="#Chip"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lugares_Fisicos"/>
+        <Class IRI="#Investigables"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Particular"/>
+        <Class IRI="#Chip"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Titular"/>
+        <Class IRI="#Lugares_Fisicos"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Telefono"/>
+        <NamedIndividual IRI="#12314353"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Particular"/>
+        <NamedIndividual IRI="#12485732954"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Chip"/>
+        <NamedIndividual IRI="#23523467324"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Particular"/>
+        <NamedIndividual IRI="#23523467324"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Telefono"/>
+        <NamedIndividual IRI="#34056943"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Antena"/>
+        <NamedIndividual IRI="#Antena1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Celda"/>
+        <NamedIndividual IRI="#Celda1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Direccion"/>
+        <NamedIndividual IRI="#Direccion_falsa_123"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Direccion"/>
+        <NamedIndividual IRI="#Direccion_falsa_231"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Direccion"/>
+        <NamedIndividual IRI="#Direccion_falsa_321"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Titular"/>
+        <NamedIndividual IRI="#Ramo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Titular"/>
+        <NamedIndividual IRI="#Ramote"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Notas"/>
+        <NamedIndividual IRI="#nota_antena"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Antena1"/>
+        <NamedIndividual IRI="#Ramo"/>
+        <NamedIndividual IRI="#Ramote"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Llama"/>
+        <NamedIndividual IRI="#12314353"/>
+        <NamedIndividual IRI="#34056943"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneTelefono"/>
+        <NamedIndividual IRI="#12485732954"/>
+        <NamedIndividual IRI="#34056943"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneTitular"/>
+        <NamedIndividual IRI="#12485732954"/>
+        <NamedIndividual IRI="#Ramo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneTelefono"/>
+        <NamedIndividual IRI="#23523467324"/>
+        <NamedIndividual IRI="#12314353"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#tieneTitular"/>
+        <NamedIndividual IRI="#23523467324"/>
+        <NamedIndividual IRI="#Ramote"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Esta_en"/>
+        <NamedIndividual IRI="#Celda1"/>
+        <NamedIndividual IRI="#Antena1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#direccionDe"/>
+        <NamedIndividual IRI="#Direccion_falsa_123"/>
+        <NamedIndividual IRI="#Ramo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#direccionDe"/>
+        <NamedIndividual IRI="#Direccion_falsa_231"/>
+        <NamedIndividual IRI="#Ramote"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#direccionDe"/>
+        <NamedIndividual IRI="#Direccion_falsa_321"/>
+        <NamedIndividual IRI="#Antena1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#Pedir_Nota"/>
+        <NamedIndividual IRI="#nota_antena"/>
+        <NamedIndividual IRI="#Antena1"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#tieneCelda"/>
+        <ObjectProperty IRI="#Esta_en"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#Recibe"/>
+        <ObjectProperty IRI="#Llama"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hospeda"/>
+        <ObjectProperty IRI="#Usa"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#tieneDireccion"/>
+        <ObjectProperty IRI="#direccionDe"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#tieneChip"/>
+        <ObjectProperty IRI="#tieneTelefono"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#Esta_en"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#direccionDe"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#tieneCelda"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#tieneDireccion"/>
+    </InverseFunctionalObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#Esta_en"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#Llama"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#Pedir_Nota"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#Recibe"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#Usa"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#direccionDe"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#esTitularDe"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#hospeda"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#tieneChip"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#tieneDireccion"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#tieneTelefono"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#tieneTitular"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#Esta_en"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#Llama"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#Pedir_Nota"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#Recibe"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#Usa"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#direccionDe"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#esTitularDe"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hospeda"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#tieneChip"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#tieneDireccion"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#tieneTelefono"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#tieneTitular"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Esta_en"/>
+        <Class IRI="#Celda"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Llama"/>
+        <Class IRI="#Telefono"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Pedir_Nota"/>
+        <Class IRI="#Investigables"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Recibe"/>
+        <Class IRI="#Telefono"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Usa"/>
+        <Class IRI="#Telefono"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#direccionDe"/>
+        <Class IRI="#Direccion"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#esTitularDe"/>
+        <Class IRI="#Titular"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hospeda"/>
+        <Class IRI="#Antena"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneCelda"/>
+        <Class IRI="#Antena"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneChip"/>
+        <Class IRI="#Telefono"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneDireccion"/>
+        <Class IRI="#Lugares_Fisicos"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneTelefono"/>
+        <Class IRI="#Chip"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tieneTitular"/>
+        <Class IRI="#Chip"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Esta_en"/>
+        <Class IRI="#Antena"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Llama"/>
+        <Class IRI="#Telefono"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Pedir_Nota"/>
+        <Class IRI="#Notas"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Recibe"/>
+        <Class IRI="#Telefono"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Usa"/>
+        <Class IRI="#Antena"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#direccionDe"/>
+        <Class IRI="#Lugares_Fisicos"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#esTitularDe"/>
+        <Class IRI="#Chip"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hospeda"/>
+        <Class IRI="#Telefono"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneCelda"/>
+        <Class IRI="#Celda"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneChip"/>
+        <Class IRI="#Chip"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneDireccion"/>
+        <Class IRI="#Direccion"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneTelefono"/>
+        <Class IRI="#Telefono"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tieneTitular"/>
+        <Class IRI="#Titular"/>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+

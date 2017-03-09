@@ -1,0 +1,10 @@
+La idea es mostrarte aprox como sería la interfaz con CERO funcionalidad.
+
+El orden sería:
+	1 - Carga de Archivos. Con el boton Finalizar Carga de Archivos pasaría a la siguiente pantalla.
+	Cuando un concepto no es conocido para el sistema (estoy buscando un nombre y no lo encuentro) se utiliza el cuadro  de dialogo de un nuevo concepto para almacenarlo.
+	2 - Busqueda. Aquí configura todo lo referido a la busqueda.
+	3 - Resultados. Aqui se muestran los resultados de la busqueda realizada.
+
+
+Esto es solo dibujos... osea, si bien esta hecha en QT no tiene nada de nada de funcionalidad. 

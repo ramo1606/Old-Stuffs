@@ -1,0 +1,25 @@
+numeroOrigen;Nro. de Origen
+numeroDestino;Nro. de Destino
+fecha;Fecha
+hora;Hora
+duracion;Duracion de LLamada
+numeroImei;Nro. de Imei
+numeroSim;Nro. de Sim
+celda;Id. de Celda
+direccionOrigen;Direccion Nro. Origen
+direccionDestino;Direccion Nro. Destino
+localidadOrigen;Localidad Nro. Origen
+localidadDestino;Localidad Nro. Destino
+tipoComunicacion;Tipo de Comunicacion
+estado;Estado
+antenaDireccion;Direccion de Antena
+antenaProvincia;Provincia de Antena
+antenaLocalidad;Localidad de Antena
+titularOrigen;Titular Nro. Origen
+titularDestino;Titular Nro. Destino
+empresaOrigen;Empresa Nro. de Origen
+empresaDestino;Empresa Nro. de Destino
+provinciaOrigen;Provincia Nro. de Origen
+provinciaDestino;Provincia Nro. de Destino
+contenidoMensaje;Contenido de Mensaje
+nombreArchivo;Archivo Original

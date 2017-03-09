@@ -1,0 +1,159 @@
+#include <ctime>
+#include <cstdlib>
+#include <iostream>
+#include <vector>
+#include "Engine/advanced2d.h"
+#include "Engine/mainwindow.h"
+#include "Engine/actorManager.h"
+#include "Engine/collisionManager.h"
+#include "Engine/stageManager.h"
+#include "Engine/control.h"
+#include "Engine/keyboard.h"
+#include "Engine/sprite.h"
+#include "Engine/pixel.h"
+#include "Engine/aircraft.h"
+#include "Engine/star.h"
+#include "Engine/particleemitter.h"
+
+#define MAX_ACTORS 1
+
+using namespace Advanced2D;
+
+bool gameover;
+Advanced2D::Engine *g_engine;
+
+
+bool game_preload()
+{
+    g_engine->setAppTitle("JUEGAZO");
+    g_engine->setFullscreen(GFX_AUTODETECT_WINDOWED);
+    g_engine->setScreenWidth(640);
+    g_engine->setScreenHeight(480);
+    g_engine->setColorDepth(32);
+    return true;
+}
+
+bool game_init()
+{
+    //load things
+    /*Creo bitmaps que voy a usar para animar la nave y creo el objeto aircraft*/
+
+    /*Creo un control y agrego las acciones para moverse*/
+    Control *control_p1 = new Control;
+
+    control_p1->add_action_name(AirCraft::DOWN, "Bajar");
+    control_p1->add_action_name(AirCraft::UP, "Subir");
+    control_p1->add_action_name(AirCraft::LEFT, "Izquierda");
+    control_p1->add_action_name(AirCraft::RIGHT, "Derecha");
+    control_p1->add_action_name(AirCraft::SHOOT, "Disparar");
+
+    /*Creo un teclado y creo las acciones que van a realizar,
+     *con la accion, el periferico, el componente del periferico y el evento del componente*/
+    Keyboard *kboard=new Keyboard;
+    control_p1->set_actionperipheral(AirCraft::DOWN, kboard, KEY_DOWN,
+        Peripheral::ON_PRESSING);
+    control_p1->set_actionperipheral(AirCraft::UP, kboard, KEY_UP,
+        Peripheral::ON_PRESSING);
+    control_p1->set_actionperipheral(AirCraft::LEFT, kboard, KEY_LEFT,
+        Peripheral::ON_PRESSING);
+    control_p1->set_actionperipheral(AirCraft::RIGHT, kboard ,KEY_RIGHT,
+        Peripheral::ON_PRESSING);
+    control_p1->set_actionperipheral(AirCraft::SHOOT, kboard ,KEY_SPACE,
+        Peripheral::ON_PRESS);
+
+    /*Seteo a quien pertenece el control 1*/
+    //control_p1->set_owner(airc);
+    /*Agrego el control 1 al manager*/
+    //g_engine->control_manager->add_control(control_p1);
+    /*Agrego el teclado al manager*/
+    //g_engine->control_manager->add_peripheral(kboard);
+
+    /*Creo las estrellas y sus representaciones graficas*/
+    /*Star *star_tmp;
+    Pixel *pixel_tmp;
+    for (int i=0; i<100;i++){
+        star_tmp=new Star();
+        pixel_tmp=new Pixel(star_tmp, makecol(255, 255, 255));
+        star_tmp->setActorGraphic(pixel_tmp);
+        star_tmp->setY(rand()%SCREEN_H);
+        star_tmp->setIsDetected(true);
+        star_tmp->setTeam(Engine::ALLY);
+        star_tmp->setCollisionMethod(CollisionManager::PP_COLLISION);
+        //Agrego la estrella al manejador de actores
+        g_engine->actor_manager->add(star_tmp);
+    }*/
+    Sprite *sp;
+    /*Creo un sprite y le agrego los bitmaps*/
+    sp = new Sprite();
+    sp->loadImage("Engine/src/sphere.bmp");
+    sp->setSize(64, 64);
+    sp->setTotalFrames(32);
+    sp->setColumns(8);
+    sp->setFrameDelay(250);
+    sp->loadMasks();
+
+    for(int n = 0; n<MAX_ACTORS; n++)
+    {
+        //AirCraft *airc;
+        //airc = new AirCraft();
+        /*Posiciono la nave en el medio de la pantalla*/
+        //airc->setX(rand() % SCREEN_W);
+        //airc->setY(rand() % SCREEN_H);
+        //airc->setActorGraphic(sp); //el sprite va a ser mi actorGraphic
+        //airc->setIsDetected(true);
+        //airc->setTeam(Engine::ENEMY);
+        //airc->setCollisionMethod(CollisionManager::PP_COLLISION);
+        //set velocity
+		//float vx = (float)(rand()%30 - 15)/10.0f;
+		//float vy = (float)(rand()%30 - 15)/10.0f;
+		//airc->setVelocity(vx , vy );
+        ParticleEmitter *emitter;
+        emitter = new ParticleEmitter("Engine/src/particle16.tga");
+        emitter->setPosition(rand() % SCREEN_W, rand() % SCREEN_H);
+        emitter->setAlphaRange(100, 255);
+        emitter->setSpread(1900);
+        emitter->setLength(100);
+
+        g_engine->actor_manager->add(emitter); //Agrego la nave al manejador de actores
+    }
+
+
+    return true;
+}
+
+void game_update()
+{
+    g_engine->actor_manager->update();
+    if (g_engine->control_manager) g_engine->control_manager->update();
+    if(key[KEY_ESC]) g_engine->close();
+    g_engine->collision_manager->update();
+}
+
+void game_end()
+{
+    //delete airc;
+    //delete sp;
+    if (g_engine->actor_manager) delete g_engine->actor_manager;
+    if (g_engine->stage_manager) delete g_engine->stage_manager;
+    if (g_engine->control_manager) delete g_engine->control_manager;
+    if (g_engine->collision_manager) delete g_engine->collision_manager;
+}
+
+void game_render()
+{
+    //draw something
+    g_engine->stage_manager->update();
+}
+
+void game_collision(Advanced2D::Actor* actor1, Advanced2D::Actor* actor2)
+{
+    actor1->hit(actor2, 1);
+    //actor2->hit(actor1, 1);
+}
+
+int main(void)
+{
+    mainwindow();
+
+    return 0;
+}
